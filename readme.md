@@ -1,4 +1,4 @@
-#Introduction
+# Introduction
 
 This is a program that I created because I wanted to see if ChatGPT could write code for a new programming language using documentation.
 
@@ -19,38 +19,30 @@ For example:
 Unfortunately, the results of the responses using the multi-step process of getting multiple prompts based on the program code were often inferior to just single well defined prompt.
 
 -----
-#Important Notes
+# Important Notes
 
-##Inside scripts:
+## Inside scripts:
 
-main.py -> This is the main loop to execute the functions of the GPT defined program
+- main.py -> This is the main loop to execute the functions of the GPT defined program
+- memory.py -> This handles the memory object and stores everything GPT has declared to memory
+- helper_functions.py -> This handles the parsing of the code lines from the GPT program
+- commands.py -> The actual python functions that correspond to the functions in the GPT program
+- gpt_functions.py -> This is all purpose function for querying ChatGPT
+- logging_functions.py -> Logging for debugging
+- search_functions.py, wolfram_functions.py -> Rudimentary searching functions for testing.
 
-memory.py -> This handles the memory object and stores everything GPT has declared to memory
-
-helper_functions.py -> This handles the parsing of the code lines from the GPT program
-
-commands.py -> The actual python functions that correspond to the functions in the GPT program
-
-gpt_functions.py -> This is all purpose function for querying ChatGPT
-
-logging_functions.py -> Logging for debugging
-
-search_functions.py, wolfram_functions.py -> Rudimentary searching functions for testing.
-
-##Also noteworthy:
+## Also noteworthy:
 
 The prompts folders has the specific roles and prompts for querying GPT depending on certain functions GPT would like to call.
 
-#IMPORTANT:
+# IMPORTANT:
 
 You will need to set up .env with your own API keys in the following format:
 
+```
 OPENAI_API_KEY = ""
-
 GOOGLE_API_KEY = ""
-
 GOOGLE_CX = ""
-
 WOLFRAM_APP_ID = ""
-
+```
 You will need to install the requirements in requirements.txt
