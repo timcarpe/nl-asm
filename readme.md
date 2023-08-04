@@ -7,15 +7,12 @@ Once I was I surprised by the ability to write the code I created this program t
 ChatGPT will write its own program for your request. For example it may search or query itself for pros and then cons and assign them to a memory address. It will then use those memory addresses in another line of code.
 
 For example:
-
+```
 [DECLARE:A][QUERYLLM:"List the pros of teaching computer science"]
-
 [DECLARE:B][QUERYLLM:"List the cons of teaching computer science"]
-
 [DECLARE:C][COPYWRITER:"Write a poem that highlights the pros and cons of teaching computer science using the provided lists." USING A + B]
-
 [OUTPUT:C]
-
+```
 Unfortunately, the results of the responses using the multi-step process of getting multiple prompts based on the program code were often inferior to just single well defined prompt.
 
 -----
@@ -33,7 +30,9 @@ Unfortunately, the results of the responses using the multi-step process of gett
 
 ## Also noteworthy:
 
-The prompts folders has the specific roles and prompts for querying GPT depending on certain functions GPT would like to call.
+The prompts folders (in data) has the specific roles and prompts for querying GPT depending on certain functions GPT would like to call.
+
+The "documentation" that ChatGPT refers to when deciding how to write the program is in the prompt under generate_program.
 
 # IMPORTANT:
 
