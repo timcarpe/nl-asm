@@ -1,4 +1,6 @@
-# Introduction
+# Natural Language Assembly
+
+## Introduction
 
 This is a program that I created because I wanted to see if ChatGPT could write code for a new programming language using documentation.
 
@@ -16,9 +18,9 @@ For example:
 Unfortunately, the results of the responses using the multi-step process of getting multiple prompts based on the program code were often inferior to just single well defined prompt.
 
 -----
-# Important Notes
+## Important Notes
 
-## Inside scripts:
+### Inside scripts:
 
 - main.py -> This is the main loop to execute the functions of the GPT defined program
 - memory.py -> This handles the memory object and stores everything GPT has declared to memory
@@ -28,7 +30,7 @@ Unfortunately, the results of the responses using the multi-step process of gett
 - logging_functions.py -> Logging for debugging
 - search_functions.py, wolfram_functions.py -> Rudimentary searching functions for testing.
 
-## Also noteworthy:
+### Also noteworthy:
 
 The prompts folders (in data) has the specific roles and prompts for querying GPT depending on certain functions GPT would like to call.
 

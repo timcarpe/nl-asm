@@ -638,3 +638,297 @@ Teaching computer science, a worthy stage.
 
 
 
+
+
+--------------------
+
+Starting log at 2023-08-04 17:42:17.785779
+>> 
+
+GPT-3.5 Response:
+Role: You are a think step by step programmer using the Natural Language Assembly Programming Language. You OUTPUT code using the provided COMMAND DOCUMENTATION. You write a program with the commands below to create step by step tasks to solve the user's request. Your commands can also get additional information from the user, prompting a large language model GPT 3.5, by searching WolframAlpha, or through an internet.
+Prompt: YOUR CONSTRAINTS: 
+Only output program code. 
+No chat. No verbose language. Do not explain.
+Create programs that create good output.
+Each line of code you program can not reference other lines you program.
+Each line of code can access anything in memory you provide the address to.
+Each program line must include either a DECLARE + Function command OR OUTPUT command.
+
+COMMAND DOCUMENTATION:
+#Note: address = 1-2 capital letters A-ZZ
+
+Input Commands:
+#Save the results of a command to the specified data type in the address A-Z. MUST be used before the command. Can be used multiple times in a program.
+[DECLARE:address] # and a function command from below
+
+Output Commands:
+#Output data stored in memory at the address. Can output multiple address. Can output multiple times in a program.
+[OUTPUT:address + address + address…]
+
+Function Commands:
+#All fucntion commands must follow a DECLARE statement. Can be used multiple times in a program.
+#Ask for more information about tasks and goals with “question" question. Useful if a goal is vague or unclear. Useful for asking for feedback from output. Useful for creating texts with user’s information. Address arguements are optional. Two versions:
+[USERRESPONSE:"question" USING address + address + address…]
+[USERRESPONSE:"question"]
+
+#Request for general knowledge and texts from GPT3.5, a large language model, with “request" request. Useful for new ideas, lists, topics, theories, general facts, etc. Address arguments are optional. Two versions:
+[QUERYLLM:"request" USING address + address + address…]
+[QUERYLLM:"request"]
+
+#Request text from a GPT 3.5 copywriter with "request" request. Useful creating text from ideas, topics, lists, theories, general facts, information, research, etc. Address arguments are optional. Two versions:
+[COPYWRITER:"request" USING address + address + address…]
+[COPYWRITER:"request"]
+
+#Search internet search engine for text information such as facts, style guides, outlines, theory, information past 2021, etc with “search query". "search query" is keywords that will be encoded in a url. Address arguments are optional keywords. Two versions:
+[SEARCH:"search query" USING address + address + address…]
+[SEARCH:"search query"]
+
+#Analyze a difficult question to something using WolframAlpha. Solve "task" like math problems, counting, calculating, science and technology related questions, society and culture related questions, and general knowledge related questions. "task" is a task with verbs like analyze, calculate, relate, select, determine, compute, distinguish. Address arguments are optional. Two versions:
+[ANALYZE:"task" USING address + address + address…]
+[ANALYZE:"task"]
+
+#Request evaluated text from an editor with “task" task. "task" is a task with verbs like compare, contrast, revise, justify, critique, relate, validate, conclude, recommend, etc. Address arguments are optional. Two versions:
+[EVALUATE:"task" USING address + address + address…]
+[EVALUATE:"task" USING address]
+
+EXAMPLES:
+
+EXAMPLE USER GOAL: How do I use formative assessment in the classroom?
+EXAMPLE OUTPUT FROM YOU:
+[DECLARE:A][SEARCH:"Formative assessment definition and examples"]
+[DECLARE:B][EVALUATE:"Give a definition an examples of formative assessment using this website." USING A]
+[DECLARE:C][QUERYLLM:"What are some benefits of using formative assessment in the classroom?" USING B]
+[DECLARE:D][EVALUATE:"Combine the definition, benefits, and examples in a single text." USING B + C]
+[DECLARE:E][QUERYLLM:"List effective strategies to implement the following benefits and examples." USING B]
+[DECLARE:F][EVALUATE:"Combine the benefits and strategies to create a plan for implementing formative assessment in the classroom." USING D + E]
+[OUTPUT:F]
+
+EXAMPLE USER GOAL: Write a short essay that explains the speed of light in terms of steps per second.
+EXAMPLE OUTPUT FROM YOU:
+[DECLARE:A][USERRESPONSE:"What do you mean by steps per second?"]
+[DECLARE:B][ANALYZE:"Calculate the speed of light in terms of steps per second" USING A]
+[DECLARE:C][EVALUATE:"Use the following information to write an essay about the topic." USING B]
+[DECLARE:D][EVALUATE:"Revise the following information for grammar, style, and factual inaccuracy." USING B + C]
+[OUTPUT:D]
+
+EXAMPLE USER GOAL: Write two essays.
+EXAMPLE OUTPUT FROM YOU:
+[DECLARE:A][QUERYLLM:"List various topics that are suitable for an essay."]
+[DECLARE:B][USERRESPONSE:"What topic would you like the essays to be about?" USING A]
+[DECLARE:C][EVALUATE:"Summarize the list of possible topics about space to just a single topic." USING B]
+[DECLARE:D][SEARCH:"Facts and information about" USING C]
+[DECLARE:E][COPYWRITER:"Provide a brief introduction to the topic." USING C + D]
+[DECLARE:F][COPYWRITER:"Create a thesis statement based on the key points." USING E]
+[DECLARE:G][COPYWRITER:"Write an essay with an argument that supports the thesis statement using the introduction." USING F + D]
+[DECLARE:H][EVALUATE:"Revise the essay to check grammar and a consistent style." USING G]
+[DECLARE:I][COPYWRITER:"Write an essay with an argument that opposes the thesis statement using the introduction." USING F + D]
+[DECLARE:J][EVALUATE:"Revise the essay to check grammar and a consistent style." USING I]
+[OUTPUT:H + J]
+
+BEGIN THINK STEP BY STEP PROGRAMMING:
+
+USER GOAL: Write an email to update a friend about the latest advancements in superconductors.
+OUTPUT FROM YOU:
+Response: [DECLARE:A][QUERYLLM:"What are the latest advancements in superconductors?"]
+[DECLARE:B][COPYWRITER:"Write an email to update a friend about the latest advancements in superconductors using the information provided." USING A]
+[OUTPUT:B]
+
+
+
+>> Parsing line: [DECLARE:A][QUERYLLM:"What are the latest advancements in superconductors?"]
+
+
+>> Parsing line: [DECLARE:B][COPYWRITER:"Write an email to update a friend about the latest advancements in superconductors using the information provided." USING A]
+
+
+>> Parsing line: [OUTPUT:B]
+
+
+>> 
+
+GPT-3.5 Response:
+Role: You are now a copywriter with expert and encyclopedic knowledge about every topic. You provide succint and detailed OUTPUT text that answers your assigned TASK. You should use USEFUL INFORMATION to write even better text. No chat and no user assistance.
+Prompt: CONSTRAINTS:
+No explaining. No chat. No user assistance.
+You are provided with OVERALL GOAL, your TASK, and USEFUL INFORMATION to help you complete your TASK.
+OUTPUT is a new text which accomplishes your TASK.
+You respond only with OUTPUT.
+
+IMPORTANT:
+OVERALL GOAL is not your task. It is for context. Completing YOUR TASK helps accomplish OVERALL GOAL.
+Your TASK is completed when you provide a OUTPUT.
+Respond to TASK.
+
+EXAMPLE OVERALL GOAL:
+Write an email.
+
+EXAMPLE TASK:
+Write a body for an email.
+
+USEFUL INFORMATION:
+none
+
+EXAMPLE OUTPUT:
+I hope this email finds you well. I just received your email and I am curious if you made a decision about meeting up on Friday? Let me know what you think.\nOh by the way, did you hear about the test next week? Let me know if you want to study.
+
+OVERALL GOAL:
+Write an email to update a friend about the latest advancements in superconductors.
+
+TASK:
+What are the latest advancements in superconductors?
+
+USEFUL INFORMATION:
+none
+
+OUTPUT:
+Response: Hey [Friend's Name],
+
+I hope this email finds you well. I wanted to update you on the latest advancements in superconductors. 
+
+Recently, scientists have made significant progress in developing high-temperature superconductors. These materials can conduct electricity without any resistance at temperatures that are relatively easier to achieve compared to traditional superconductors. This breakthrough has opened up new possibilities for practical applications of superconductors in various industries, such as energy transmission, medical imaging, and quantum computing.
+
+Additionally, researchers have been exploring the use of unconventional superconductors, such as topological superconductors and iron-based superconductors. These materials exhibit unique properties and could potentially revolutionize the field of superconductivity.
+
+It's truly an exciting time in the world of superconductors, and I thought you would find these advancements fascinating. Let me know if you'd like to dive deeper into this topic or if you have any questions.
+
+Take care and talk to you soon!
+
+Best,
+[Your Name]
+
+
+
+>> Memory item added: address=A, description=What are the latest advancements in superconductors?, data=Hey [Friend's Name],
+
+I hope this email finds you well. I wanted to update you on the latest advancements in superconductors. 
+
+Recently, scientists have made significant progress in developing high-temperature superconductors. These materials can conduct electricity without any resistance at temperatures that are relatively easier to achieve compared to traditional superconductors. This breakthrough has opened up new possibilities for practical applications of superconductors in various industries, such as energy transmission, medical imaging, and quantum computing.
+
+Additionally, researchers have been exploring the use of unconventional superconductors, such as topological superconductors and iron-based superconductors. These materials exhibit unique properties and could potentially revolutionize the field of superconductivity.
+
+It's truly an exciting time in the world of superconductors, and I thought you would find these advancements fascinating. Let me know if you'd like to dive deeper into this topic or if you have any questions.
+
+Take care and talk to you soon!
+
+Best,
+[Your Name]
+
+>> 
+
+GPT-3.5 Response:
+Role: You are now an assistant copywriter and editor. You will provide OUTPUT text that fulfills your assigned TASK. You will provide texts text from ideas, topics, lists, theories, general facts, information, research, etc. You should use USEFUL INFORMATION to write even better text. No chat and no user assistance.
+Prompt: CONSTRAINTS:
+No explaining. No chat. No user assistance.
+You are provided with OVERALL GOAL, your TASK, and USEFUL INFORMATION to help you complete your TASK.
+OUTPUT is a new text which accomplishes your TASK.
+You respond only with OUTPUT.
+
+IMPORTANT:
+OVERALL GOAL is not your task. It is for context. Completing YOUR TASK helps accomplish OVERALL GOAL.
+Your TASK is completed when you provide a OUTPUT.
+Respond to TASK.
+
+EXAMPLE OVERALL GOAL:
+Write an email.
+
+EXAMPLE TASK:
+Write a body for an email.
+
+USEFUL INFORMATION:
+none
+
+EXAMPLE OUTPUT:
+I hope this email finds you well. I just received your email and I am curious if you made a decision about meeting up on Friday? Let me know what you think.\nOh by the way, did you hear about the test next week? Let me know if you want to study.
+
+OVERALL GOAL:
+Write an email to update a friend about the latest advancements in superconductors.
+
+TASK:
+"Write an email to update a friend about the latest advancements in superconductors using the information provided."
+
+USEFUL INFORMATION:
+Hey [Friend's Name],
+
+I hope this email finds you well. I wanted to update you on the latest advancements in superconductors. 
+
+Recently, scientists have made significant progress in developing high-temperature superconductors. These materials can conduct electricity without any resistance at temperatures that are relatively easier to achieve compared to traditional superconductors. This breakthrough has opened up new possibilities for practical applications of superconductors in various industries, such as energy transmission, medical imaging, and quantum computing.
+
+Additionally, researchers have been exploring the use of unconventional superconductors, such as topological superconductors and iron-based superconductors. These materials exhibit unique properties and could potentially revolutionize the field of superconductivity.
+
+It's truly an exciting time in the world of superconductors, and I thought you would find these advancements fascinating. Let me know if you'd like to dive deeper into this topic or if you have any questions.
+
+Take care and talk to you soon!
+
+Best,
+[Your Name]
+
+
+
+OUTPUT:
+Response: Hey [Friend's Name],
+
+I hope this email finds you well. I wanted to update you on the latest advancements in superconductors.
+
+Recently, scientists have made significant progress in developing high-temperature superconductors. These materials can conduct electricity without any resistance at temperatures that are relatively easier to achieve compared to traditional superconductors. This breakthrough has opened up new possibilities for practical applications of superconductors in various industries, such as energy transmission, medical imaging, and quantum computing.
+
+Additionally, researchers have been exploring the use of unconventional superconductors, such as topological superconductors and iron-based superconductors. These materials exhibit unique properties and could potentially revolutionize the field of superconductivity.
+
+It's truly an exciting time in the world of superconductors, and I thought you would find these advancements fascinating. Let me know if you'd like to dive deeper into this topic or if you have any questions.
+
+Take care and talk to you soon!
+
+Best,
+[Your Name]
+
+
+
+>> Memory item added: address=B, description="Write an email to update a friend about the latest advancements in superconductors using the information provided.", data=Hey [Friend's Name],
+
+I hope this email finds you well. I wanted to update you on the latest advancements in superconductors.
+
+Recently, scientists have made significant progress in developing high-temperature superconductors. These materials can conduct electricity without any resistance at temperatures that are relatively easier to achieve compared to traditional superconductors. This breakthrough has opened up new possibilities for practical applications of superconductors in various industries, such as energy transmission, medical imaging, and quantum computing.
+
+Additionally, researchers have been exploring the use of unconventional superconductors, such as topological superconductors and iron-based superconductors. These materials exhibit unique properties and could potentially revolutionize the field of superconductivity.
+
+It's truly an exciting time in the world of superconductors, and I thought you would find these advancements fascinating. Let me know if you'd like to dive deeper into this topic or if you have any questions.
+
+Take care and talk to you soon!
+
+Best,
+[Your Name]
+
+>> Full Memory State: 
+address, description, data
+address=A, description=What are the latest advancements in superconductors?, data=Hey [Friend's Name],
+
+I hope this email finds you well. I wanted to update you on the latest advancements in superconductors. 
+
+Recently, scientists have made significant progress in developing high-temperature superconductors. These materials can conduct electricity without any resistance at temperatures that are relatively easier to achieve compared to traditional superconductors. This breakthrough has opened up new possibilities for practical applications of superconductors in various industries, such as energy transmission, medical imaging, and quantum computing.
+
+Additionally, researchers have been exploring the use of unconventional superconductors, such as topological superconductors and iron-based superconductors. These materials exhibit unique properties and could potentially revolutionize the field of superconductivity.
+
+It's truly an exciting time in the world of superconductors, and I thought you would find these advancements fascinating. Let me know if you'd like to dive deeper into this topic or if you have any questions.
+
+Take care and talk to you soon!
+
+Best,
+[Your Name]
+
+address=B, description="Write an email to update a friend about the latest advancements in superconductors using the information provided.", data=Hey [Friend's Name],
+
+I hope this email finds you well. I wanted to update you on the latest advancements in superconductors.
+
+Recently, scientists have made significant progress in developing high-temperature superconductors. These materials can conduct electricity without any resistance at temperatures that are relatively easier to achieve compared to traditional superconductors. This breakthrough has opened up new possibilities for practical applications of superconductors in various industries, such as energy transmission, medical imaging, and quantum computing.
+
+Additionally, researchers have been exploring the use of unconventional superconductors, such as topological superconductors and iron-based superconductors. These materials exhibit unique properties and could potentially revolutionize the field of superconductivity.
+
+It's truly an exciting time in the world of superconductors, and I thought you would find these advancements fascinating. Let me know if you'd like to dive deeper into this topic or if you have any questions.
+
+Take care and talk to you soon!
+
+Best,
+[Your Name]
+
+
+
