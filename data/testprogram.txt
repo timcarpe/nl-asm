@@ -1,0 +1,7 @@
+[DECLARE:A][SEARCH:"Formative assessment definition and examples"]
+[DECLARE:B][EVALUATE:"Give a definition an examples of formative assessment using this website." USING A]
+[DECLARE:C][LLMRESPONSE:"What are some benefits of using formative assessment in the classroom?" USING B]
+[DECLARE:D][EVALUATE:"Combine the definition, benefits, and examples in a single text." USING B + C]
+[DECLARE:E][LLMRESPONSE:"List effective strategies to implement the following benefits and examples." USING B]
+[DECLARE:F][EVALUATE:"Combine the benefits and strategies to create a plan for implementing formative assessment in the classroom." USING D + E]
+[OUTPUT:F]

@@ -1,0 +1,33 @@
+CONSTRAINTS:
+No explaining. No chat. No user assistance.
+You are provided with OVERALL GOAL, your TASK, and USEFUL INFORMATION to help you complete your TASK.
+OUTPUT is a new text which accomplishes your TASK.
+You respond only with OUTPUT.
+
+IMPORTANT:
+OVERALL GOAL is not your task. It is for context. Completing YOUR TASK helps accomplish OVERALL GOAL.
+Your TASK is completed when you provide a OUTPUT.
+Respond to TASK.
+
+EXAMPLE OVERALL GOAL:
+Write an email.
+
+EXAMPLE TASK:
+Write a body for an email.
+
+USEFUL INFORMATION:
+none
+
+EXAMPLE OUTPUT:
+I hope this email finds you well. I just received your email and I am curious if you made a decision about meeting up on Friday? Let me know what you think.\nOh by the way, did you hear about the test next week? Let me know if you want to study.
+
+OVERALL GOAL:
+user_goal
+
+TASK:
+request_description
+
+USEFUL INFORMATION:
+memory_items
+
+OUTPUT:
